@@ -1,0 +1,34 @@
+version: "3"
+name: "High Rish Repositories"
+
+
+# All items in this list are applies
+codescanning:
+  # name of the policy to be applied
+  - name: codeql
+    # must be enabled
+    enabled: true
+    # only applies to these tool(s)
+    tools:
+      - CodeQL
+
+    # filter: identifier conditions
+    ids:
+      - js/sql-injection    # or condition
+      - java/sql-injection
+    ids-warning:
+      - js/xss     # or condition
+    ids-ignore:
+      - js/log-injection     # or condition
+
+
+  - name: semgrep
+    # must be enabled
+    enabled: true
+    # only applies to these tool(s)
+    tools:
+      - Semgrep
+
+    # filters
+    ids:
+      - rule #...

@@ -1,0 +1,43 @@
+version: "3"
+name: "GeekMasher Repo Policy"
+
+# > Single blocks
+
+codescanning:
+  # Code Scanning is enabled
+  enabled: true
+
+  # anything above what is set
+  severity: error
+
+  # filter: identifier conditions
+  ids:
+    - js/sql-injection    # or condition
+    - java/sql-injection
+  ids-warning:
+    - js/xss     # or condition
+  ids-ignore:
+    - js/log-injection     # or condition
+
+  names:
+    - "The Title of the Issue"   # or condition
+  
+  # filter: on CWEs
+  cwes:
+    - CWE-79  # or condition
+    - CWE-89
+
+  # filter: on OWASP (web apps or mobile)
+  owasp-top10:
+    - A03:2021  # or condition
+    - M01:2016
+
+  # filter: only apply the poc to these tools
+  tools:
+    - CodeQL    # or condition
+    - Semgrep
+
+  # mandate: make sure that the analysis / tools are present
+  tools-required:
+    - CodeQL    # and condition
+

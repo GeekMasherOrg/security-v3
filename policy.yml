@@ -1,0 +1,41 @@
+version: "3"
+name: "GeekMasherOrg Security Policy v3"
+
+# > This block allows you to have many different threat models
+# > which are applied on different condictions. This isn't needed
+# > unless you want to apply different policies to different repositories
+
+threatmodels:
+  # > default is reserved and will be the default to applied if no other threatmodel 
+  # > match is present. If this isn't set, it will use the `codescanning`, 
+  # > `supplychain`, `secretscanning` blocks in this file (as done in this config). 
+
+  # default:
+  #   uses: ./policies/default.yml
+
+  # this key can be anything
+  geekmasher-repos:
+    # uses which policy file for these repos
+    uses: ./policies/geekmasher.yml
+    # list of repos the uses block will be applies too
+    repositories:
+      - geekmasher/ghastoolkit
+
+  advanced-security:
+    uses: ./policies/high.yml
+    repositories:
+      - advanced-security/policy-as-code
+      - advanced-security/codeql-queries
+
+
+# > These 3 blocks are my defaults. We want them only enabled
+
+codescanning:
+  enabled: true
+
+supplychain:
+  enabled: true
+
+secertscanning:
+  enabled: true
+
