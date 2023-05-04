@@ -4,9 +4,6 @@ name: "GeekMasher Repo Policy"
 # > Single blocks
 
 codescanning:
-  # Code Scanning is enabled
-  enabled: true
-
   # anything above what is set
   severity: error
 
@@ -40,4 +37,50 @@ codescanning:
   # mandate: make sure that the analysis / tools are present
   tools-required:
     - CodeQL    # and condition
+
+
+
+# > Supply Chain includes Dependabot and DedendencyGraph features
+supplychain:
+  # anything above what is set
+  severity: error
+
+  # filter: Identifiers / PURL in Dependency Graph
+  ids:
+    - npm:jest     # or condition
+  ids-warnings:
+    - npm:express     # or condition
+  ids-ignore:
+    - npm:react     # or condition
+
+  # filter: match on or ignore
+  advisories:
+    - GHSA-446m-mv8f-q348
+  advisories-ignore:
+    - GHSA-446m-mv8f-q347
+
+  # filter: licenses present in Dependency Graph
+  licenses:
+    - GPL-*
+
+  # filter: on unknown licenses, similar to `license` but with predefined list
+  licenses-unknown: true
+
+  # warn: on licenses present but warn only
+  licenses-warning:
+    - NA           # or condition
+    - NOASSERTION
+
+  # filter: apply an ignore on the license used
+  licenses-ignore:
+    - MIT
+
+
+# > Secret Scanning
+secretscanning:
+  ids:
+    - aws      # or
+    - azure
+
+  push-protection: true
 
