@@ -39,3 +39,17 @@ supplychain:
 secertscanning:
   enabled: true
 
+
+# > [future] Reporting
+reporting:
+  projectboard:
+    name: "Security Compliance"
+
+  workflow_dispatch:
+    name: "workflow.yml"
+    repository: "GeekMasherOrg/security-v3"
+  
+  topic_tagging:
+    compliant: ""
+    non-compliant: "non-compliant"
+  
