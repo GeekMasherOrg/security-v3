@@ -1,0 +1,15 @@
+version: "3"
+name: "Default Policy"
+
+# > This matches the examples in `policy.yml`
+
+codescanning:
+  enabled: true
+
+supplychain:
+  enabled: true
+
+secertscanning:
+  enabled: true
+
+
