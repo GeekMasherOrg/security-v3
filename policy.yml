@@ -40,7 +40,7 @@ codescanning:
 supplychain:
   enabled: true
 
-secertscanning:
+secretscanning:
   enabled: true
 
 
