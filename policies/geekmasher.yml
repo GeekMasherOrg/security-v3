@@ -25,7 +25,7 @@ codescanning:
     - CWE-89
 
   # filter: on OWASP (web apps or mobile)
-  owasp-top10:
+  owasp:
     - A03:2021  # or condition
     - M01:2016
 
