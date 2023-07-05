@@ -31,6 +31,19 @@ threatmodels:
       - advanced-security/policy-as-code
       - advanced-security/codeql-queries
 
+  # the threatmodel name is the repository
+  GeekMasherOrg/security-v3:
+    uses: ./policies/default.yml
+
+  # inline policy for threatmodel repository
+  GeekMasherOrg/security:
+    policy:
+      codescanning:
+        enabled: true
+      supplychain:
+        enabled: true
+      secretscanning:
+        enabled: true
 
 # > These 3 blocks are my defaults. We want them only enabled
 
