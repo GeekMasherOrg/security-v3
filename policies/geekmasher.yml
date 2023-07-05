@@ -11,9 +11,9 @@ codescanning:
   ids:
     - js/sql-injection    # or condition
     - java/sql-injection
-  ids-warning:
+  ids-warnings:
     - js/xss     # or condition
-  ids-ignore:
+  ids-ignores:
     - js/log-injection     # or condition
 
   names:
@@ -46,17 +46,17 @@ supplychain:
   severity: error
 
   # filter: Identifiers / PURL in Dependency Graph
-  ids:
+  names:
     - npm:jest     # or condition
-  ids-warnings:
+  names-warnings:
     - npm:express     # or condition
-  ids-ignore:
+  names-ignores:
     - npm:react     # or condition
 
   # filter: match on or ignore
   advisories:
     - GHSA-446m-mv8f-q348
-  advisories-ignore:
+  advisories-ignores:
     - GHSA-446m-mv8f-q347
 
   # filter: licenses present in Dependency Graph
@@ -67,12 +67,12 @@ supplychain:
   licenses-unknown: true
 
   # warn: on licenses present but warn only
-  licenses-warning:
+  licenses-warnings:
     - NA           # or condition
     - NOASSERTION
 
   # filter: apply an ignore on the license used
-  licenses-ignore:
+  licenses-ignores:
     - MIT
 
 

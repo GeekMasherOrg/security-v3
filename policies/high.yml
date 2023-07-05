@@ -16,9 +16,9 @@ codescanning:
     ids:
       - js/sql-injection    # or condition
       - java/sql-injection
-    ids-warning:
+    ids-warnings:
       - js/xss     # or condition
-    ids-ignore:
+    ids-ignores:
       - js/log-injection     # or condition
 
 
