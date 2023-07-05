@@ -1,6 +1,10 @@
 version: "3"
 name: "GeekMasherOrg Security Policy v3"
 
+# > [optional] Display all information in the output logs
+# > default: false
+display: true
+
 # > This block allows you to have many different threat models
 # > which are applied on different condictions. This isn't needed
 # > unless you want to apply different policies to different repositories
