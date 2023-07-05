@@ -44,8 +44,8 @@ secertscanning:
   enabled: true
 
 
-# > [future] Reporting
-reporting:
+# > [future] Plugins
+plugins:
   projectboard:
     name: "Security Compliance"
 
