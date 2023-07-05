@@ -32,3 +32,9 @@ codescanning:
     # filters
     ids:
       - rule #...
+
+supplychain:
+  severity: high
+  remediate:
+    errors: 5
+    warnings: 60
